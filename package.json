@@ -28,6 +28,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.13",
     "postcss-loader": "^6.2.1",
@@ -42,10 +44,11 @@
   "scripts": {
     "start": "NODE_ENV=production node app.js",
     "lint": "npx prettier --check .",
-    "lint:fix": "npx prettier --write ."
+    "lint:fix": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "main": "app.js",
-  "engines": {
-    "node": "^18.0"
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
