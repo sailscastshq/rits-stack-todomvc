@@ -19,7 +19,7 @@ export default function TodoForm() {
         name="name"
         onChange={handleChange}
         value={newTodo}
-        placeholder="Learn Sails.js"
+        placeholder="What do you want to get done?"
       />
     </form>
   )
