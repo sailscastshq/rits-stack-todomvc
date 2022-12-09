@@ -1,13 +1,14 @@
+import { Inertia } from '@inertiajs/inertia'
 import { useState } from 'react'
 export default function TodoForm() {
   const [newTodo, setNewTodo] = useState('')
 
   function handleSubmit(event) {
     event.preventDefault()
-    Inertia.post('/todos', newTodo)
+    Inertia.post('/todos', { name: newTodo })
+    setNewTodo('')
   }
   function handleChange(event) {
-    console.log(event.target.value)
     setNewTodo(event.target.value)
   }
   return (
