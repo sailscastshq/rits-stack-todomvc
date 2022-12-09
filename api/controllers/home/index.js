@@ -3,12 +3,20 @@ module.exports = {
 
   description: 'Home index.',
 
-  inputs: {},
+  inputs: {
+    completed: {
+      type: 'boolean',
+    },
+  },
 
   exits: {},
 
-  fn: async function () {
-    const todos = [{ name: 'Learn Sails', completed: false }]
+  fn: async function ({ completed }) {
+    const criteria = completed !== undefined ? { completed } : {}
+    const todos = await Todo.find(criteria).sort([
+      { createdAt: 'DESC' },
+      { completed: 'DESC' },
+    ])
     return sails.inertia.render('index', { todos })
   },
 }
