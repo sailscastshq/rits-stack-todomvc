@@ -8,8 +8,7 @@ module.exports = {
   exits: {},
 
   fn: async function () {
-    return sails.inertia.render('index', {
-      name: 'Inertia',
-    })
+    const todos = [{ name: 'Learn Sails', completed: false }]
+    return sails.inertia.render('index', { todos })
   },
 }
