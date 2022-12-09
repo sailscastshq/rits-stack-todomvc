@@ -4,7 +4,7 @@ import TodoForm from '@/components/TodoForm'
 
 export default function Index({ todos }) {
   return (
-    <main className="mx-auto mt-10 flex h-screen w-3/6 flex-col space-y-8 text-gray-700">
+    <main className="mx-auto mt-10 flex h-screen w-full flex-col space-y-8 px-4 text-gray-700 sm:w-2/6">
       <h1 className="text-center text-5xl text-purple-700">todos</h1>
       <TodoForm />
       <TodoList todos={todos} />
