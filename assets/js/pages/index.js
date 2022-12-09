@@ -1,7 +1,6 @@
 import TodoFooter from '@/components/TodoFooter'
 import TodoList from '@/components/TodoList'
 import TodoForm from '@/components/TodoForm'
-import { Link } from '@inertiajs/inertia-react'
 
 export default function Index({ todos }) {
   return (
