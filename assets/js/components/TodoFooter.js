@@ -21,9 +21,7 @@ export default function TodoFooter({ undoneTodosCount }) {
     <footer className="w-full">
       <section className="flex w-full justify-between space-x-4">
         <p className="font-light text-slate-400">
-          {!undoneTodosCount
-            ? 'No todos left'
-            : `${undoneTodosCount} todos left`}
+          {!undoneTodosCount ? 'No todos' : `${undoneTodosCount} todos left`}
         </p>
         <ul className="flex justify-center space-x-4">
           {footerLinks?.map((footerLink, index) => (
