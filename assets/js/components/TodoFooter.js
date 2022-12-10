@@ -1,11 +1,13 @@
 import { Link } from '@inertiajs/inertia-react'
 
-export default function TodoFooter({ todosCount }) {
+export default function TodoFooter({ undoneTodosCount }) {
   return (
     <footer className="w-full">
       <section className="flex w-full justify-between space-x-4">
         <p className="font-light">
-          {!todosCount ? 'No todos left' : `${todosCount} todos left`}
+          {!undoneTodosCount
+            ? 'No todos left'
+            : `${undoneTodosCount} todos left`}
         </p>
         <ul className="flex justify-center space-x-4">
           <li>

@@ -17,6 +17,7 @@ module.exports = {
       { createdAt: 'DESC' },
       { completed: 'DESC' },
     ])
-    return sails.inertia.render('index', { todos })
+    const undoneTodosCount = await Todo.count({ completed: false })
+    return sails.inertia.render('index', { todos, undoneTodosCount })
   },
 }
