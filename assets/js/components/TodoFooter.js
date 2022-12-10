@@ -4,7 +4,7 @@ export default function TodoFooter({ undoneTodosCount }) {
   return (
     <footer className="w-full">
       <section className="flex w-full justify-between space-x-4">
-        <p className="font-light">
+        <p className="font-light text-slate-400">
           {!undoneTodosCount
             ? 'No todos left'
             : `${undoneTodosCount} todos left`}
@@ -24,7 +24,7 @@ export default function TodoFooter({ undoneTodosCount }) {
           method="DELETE"
           href="/todos"
           as="button"
-          className="font-light hover:underline"
+          className="font-light decoration-purple-800 hover:underline"
         >
           Clear completed
         </Link>
