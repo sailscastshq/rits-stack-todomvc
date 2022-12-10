@@ -22,4 +22,5 @@ module.exports.routes = {
   'POST /todos': 'todo/create-todo',
   'PATCH /todos/:id': 'todo/update-todo',
   'DELETE /todos': 'todo/clear-completed',
+  'DELETE /todos/:id': 'todo/remove-todo',
 }
