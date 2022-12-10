@@ -30,6 +30,7 @@ export default function TodoList({ todos }) {
             href={`/todos/${todo.id}`}
             method="DELETE"
             as="button"
+            title="Remove todo"
             className="justify-self-end text-lg text-gray-400 opacity-0 hover:text-gray-600 group-hover:opacity-100"
           >
             &#10005;
