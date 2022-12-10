@@ -1,6 +1,6 @@
 import { Inertia } from '@inertiajs/inertia'
 export default function TodoList({ todos }) {
-  function completeTodo(id) {
+  function updateTodo(id) {
     Inertia.patch(`/todos/${id}`)
   }
 
@@ -12,7 +12,7 @@ export default function TodoList({ todos }) {
             type="checkbox"
             checked={todo.completed}
             className="accent-purple-500"
-            onChange={() => completeTodo(todo.id)}
+            onChange={() => updateTodo(todo.id)}
           />
           <label
             className={`${
