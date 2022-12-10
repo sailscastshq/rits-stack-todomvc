@@ -12,10 +12,10 @@ export default function TodoFooter({ todosCount }) {
             <Link href="/">All</Link>
           </li>
           <li>
-            <Link href="/?todos=undone">Undone</Link>
+            <Link href="/?completed=false">Undone</Link>
           </li>
           <li>
-            <Link href="/?todos=done">Done</Link>
+            <Link href="/?completed=true">Done</Link>
           </li>
         </ul>
         <Link
