@@ -20,4 +20,5 @@ module.exports.routes = {
    ***************************************************************************/
   'GET /': 'home/index',
   'POST /todos': 'todo/create-todo',
+  'PATCH /todos/:id': 'todo/update-todo',
 }
