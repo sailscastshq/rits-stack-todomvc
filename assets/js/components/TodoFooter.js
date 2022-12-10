@@ -1,5 +1,4 @@
 import { Link } from '@inertiajs/inertia-react'
-
 export default function TodoFooter({ undoneTodosCount }) {
   return (
     <footer className="w-full">
