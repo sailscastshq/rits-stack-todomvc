@@ -1,4 +1,9 @@
+import { Inertia } from '@inertiajs/inertia'
 export default function TodoList({ todos }) {
+  function completeTodo(id) {
+    Inertia.patch(`/todos/${id}`)
+  }
+
   return (
     <ul className="flex flex-col items-start justify-start space-y-4">
       {todos?.map((todo, index) => (
@@ -7,6 +12,7 @@ export default function TodoList({ todos }) {
             type="checkbox"
             checked={todo.completed}
             className="accent-purple-500"
+            onChange={() => completeTodo(todo.id)}
           />
           <label
             className={`${
