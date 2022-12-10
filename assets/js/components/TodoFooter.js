@@ -1,5 +1,22 @@
 import { Link } from '@inertiajs/inertia-react'
+import { usePage } from '@inertiajs/inertia-react'
 export default function TodoFooter({ undoneTodosCount }) {
+  const { url } = usePage()
+  console.log(url)
+  const footerLinks = [
+    {
+      label: 'All',
+      url: '/',
+    },
+    {
+      label: 'Undone',
+      url: '/?completed=false',
+    },
+    {
+      label: 'Done',
+      url: '/?completed=true',
+    },
+  ]
   return (
     <footer className="w-full">
       <section className="flex w-full justify-between space-x-4">
@@ -9,15 +26,20 @@ export default function TodoFooter({ undoneTodosCount }) {
             : `${undoneTodosCount} todos left`}
         </p>
         <ul className="flex justify-center space-x-4">
-          <li>
-            <Link href="/">All</Link>
-          </li>
-          <li>
-            <Link href="/?completed=false">Undone</Link>
-          </li>
-          <li>
-            <Link href="/?completed=true">Done</Link>
-          </li>
+          {footerLinks?.map((footerLink, index) => (
+            <li key={index}>
+              <Link
+                href={footerLink.url}
+                className={
+                  url == footerLink.url
+                    ? 'rounded-sm border border-purple-500 p-2 text-purple-900'
+                    : ''
+                }
+              >
+                {footerLink.label}
+              </Link>
+            </li>
+          ))}
         </ul>
         <Link
           method="DELETE"
