@@ -15,7 +15,7 @@ export default function TodoForm() {
     <form className="w-full" onSubmit={handleSubmit}>
       <input
         autoFocus
-        className="w-full border-none text-xl text-purple-900 caret-purple-500 placeholder:text-gray-400/60 focus:outline-none"
+        className="w-full border-none text-xl text-gray-900 caret-purple-500 placeholder:text-gray-400/60 focus:outline-none"
         type="text"
         name="name"
         onChange={handleChange}
