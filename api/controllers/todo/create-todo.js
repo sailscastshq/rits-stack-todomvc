@@ -12,6 +12,7 @@ module.exports = {
 
   exits: {
     success: {
+      statusCode: 201,
       responseType: 'redirect',
     },
   },
