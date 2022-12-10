@@ -21,5 +21,5 @@ module.exports.routes = {
   'GET /': 'home/index',
   'POST /todos': 'todo/create-todo',
   'PATCH /todos/:id': 'todo/update-todo',
-  'DELETE /todos': 'todo/clear-completed-todos',
+  'DELETE /todos': 'todo/clear-completed',
 }
