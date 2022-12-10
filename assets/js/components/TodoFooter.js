@@ -2,7 +2,6 @@ import { Link } from '@inertiajs/inertia-react'
 import { usePage } from '@inertiajs/inertia-react'
 export default function TodoFooter({ undoneTodosCount }) {
   const { url } = usePage()
-  console.log(url)
   const footerLinks = [
     {
       label: 'All',
