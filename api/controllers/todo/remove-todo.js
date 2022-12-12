@@ -5,7 +5,7 @@ module.exports = {
 
   inputs: {
     id: {
-      type: 'string',
+      type: 'number',
       required: true,
     },
   },
